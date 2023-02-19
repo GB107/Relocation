@@ -1,0 +1,45 @@
+head
+  title Profile
+  style.
+    .container {
+    display: flex;
+    align-items: center;
+    }
+    .photo {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    }
+    .name {
+    font-size: 24px;
+    font-weight: bold;
+    margin-left: 20px;
+    }
+    .form {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+    }
+    .form label {
+    margin-right: 10px;
+    }
+    .form input[type="file"] {
+    appearance: none;
+    }
+    .form button {
+    appearance: none;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    background-color: blue;
+    color: white;
+    font-size: 16px;
+    }
+.container
+  img.photo(src='/profile-picture.jpg' alt='Profile picture')
+  .name John Doe
+form.form(action='/upload' method='post' enctype='multipart/form-data')
+  label(for='profile-picture') Update profile picture:
+  input#profile-picture(type='file' name='profile-picture')
+  button(type='submit') Update

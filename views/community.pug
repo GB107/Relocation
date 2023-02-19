@@ -1,0 +1,27 @@
+doctype html
+head
+  style
+      include ../static/communityStyle.css
+  title community
+  link(rel='stylesheet' type='text/css' href='community.css')
+.main
+  .navbar
+    .logo BLUELEARN
+  .info
+    .head
+      h3
+        | CONNECT WITH YOUR 
+        span COMMUNITY
+        |  HERE 
+      form.search(name='f1', action='/search',method='post')
+         input(type='text' name='search' placeholder='SEARCH HERE....')
+         input(type='submit' value='SEARCH' )
+      each Id in Ids
+       if Id.role=="Resident"
+         ul(style='margin-top: 70px;display: flex;')
+            a(href="/profile" type='none' style='margin-left: 450px;')  #{Id.username}
+            li(type='none' style='margin-left: 100px;')  #{Id.email}
+            li(type='none' style=' margin-left: 100px;') #{Id.country}
+      
+      
+                

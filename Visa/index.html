@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<link rel="stylesheet" href="style.css">
+<script src="app.js"></script>
+<body>
+    <div class="container">
+        
+        <div class="demo-flex-spacer">
+            <h1>VISA DETAILS</h1>
+        </div>
+      
+        <div class="webflow-style-input">
+          <input id="in" type="text" placeholder="Your Country's Name"></input>
+          <div class="btn"><button type="submit" onclick="myFunction()"><i class="icon ion-android-arrow-forward">Submit</i></button></div>
+        </div>
+      
+        <div class="demo-flex-spacer"></div>
+    </div>
+</body>
+<script>
+    function myFunction() {
+    var firstname = document.getElementById('in').value;
+    console.log(firstname);
+    let st="https://visaindex.com/country/"+firstname+"-passport-ranking/";
+    console.log(st);
+    window.open(st,"_self");
+  }
+</script>
+</html>

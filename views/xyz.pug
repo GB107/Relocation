@@ -1,0 +1,19 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(http-equiv='X-UA-Compatible' content='IE=edge')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  title Document
+  each Id in Ids
+      if Id.role=="Resident"
+           p #{Id.username}
+           p #{Id.email}
+//- div
+//-    ul
+//-       each Id in Ids
+//-       //- li= #{Id.username} + ' is ' + #{Id.role}+ ' years old.'
+//-       //- li= #{Id.username} + ' is ' + #{Id.role}+ ' years old.'
+  //- | #{Ids[0].role}
+  //- | #{Ids[1].username}
+  //- | #{Ids[2].username}
+
